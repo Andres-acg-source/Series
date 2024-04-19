@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
       <div class="col mb-2">
-        <table class="table" *ngFor="let serie of series">
+        <table class="table">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -10,7 +10,7 @@
               <th scope="col">Seasons</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngFor="let serie of series">
             <tr>
               <th scope="row">{{serie.id}}</th>
               <td>{{serie.name}}</td>
@@ -19,6 +19,8 @@
             </tr>
           </tbody>
         </table>
+        <div class="row">Seasons Average: {{averageSeasons}} </div>
       </div>
   </div>
 </div>
+

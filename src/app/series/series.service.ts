@@ -8,7 +8,7 @@ import { Series } from './series';
   providedIn: 'root'
 })
 export class SeriesService {
-  private apiUrl: string = environment.baseUrl + 'series';
+  private apiUrl: string = environment.baseUrl;
 
 
 constructor(private http: HttpClient) { }
